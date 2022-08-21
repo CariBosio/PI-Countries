@@ -1,22 +1,7 @@
 import axios from "axios";
-// const { REACT_APP_BACKEND_URL } = process.env;
 
-// export function getCountries() {
-//   return async function (dispatch) {
-//     var json = await axios.get(REACT_APP_BACKEND_URL+"/countries");
-//     //var json = await axios.get("https://localhost:3001/countries");
-//     //var json = await axios.get("https://restcountries.com/v3/all");
 
-//     //var json = await axios.fetch ("https://localhost:3001/countries", {
-//     //conexión entre el front y el back
-//     return dispatch({
-//       type: "GET_COUNTRIES",
-//       payload: json.data,
-//     });
-//   };
-// }
-
-//!getCountries--------------------------------------------------------
+//getCountries--------------------------------------------------------
 //*Async-await
 
 export function getCountries() {
@@ -38,7 +23,7 @@ export function getCountries() {
       // });
   };
 }
-//! ↑ ruta de GET a countries
+// ↑ ruta de GET a countries
 
 //*Promises
 // export function getCountries() {
@@ -55,7 +40,7 @@ export function getCountries() {
 
 
 
-//!getNameCountries--------------------------------------------------------
+//getNameCountries--------------------------------------------------------
 //*Async-await
 
 export function getNameCountries(name) {
@@ -102,7 +87,7 @@ export function getNameCountries(name) {
 
 
 
-//!getActivities--------------------------------------------------------
+//getActivities--------------------------------------------------------
 //*Async-await
 //me trae las actividades para después poder crearlas
 export function getActivities() {
@@ -147,7 +132,7 @@ export function getActivities() {
 
 
 
-//!postActivities--------------------------------------------------------
+//postActivities--------------------------------------------------------
 //*Async-await
 
 //accion para crear una actividad - dispara una ruta de POST
@@ -173,11 +158,7 @@ export function postActivities(payload){  //payload es el objeto que me llega po
 //   };
 // }
 
-
-
-
-
-//!filtrar por continente--------------------------------------------------------
+//filtrar por continente--------------------------------------------------------
 
 export function filterCountriesByContinents(payload) {
   //payload=value del imput (europe, asia, .....)
@@ -185,10 +166,10 @@ export function filterCountriesByContinents(payload) {
     type: "FILTER_BY_CONTINENTS",
     payload,
   };
-  //! ↑la logica la armamos en reducer
+  // ↑la logica la armamos en reducer
 }
 
-//!filtrar por actividad creada--------------------------------------------------------
+//filtrar por actividad creada--------------------------------------------------------
 export function filterCountriesByActivities(payload) {  //payload es el value de la opcion que se elija
   return {
     type: "FILTER_BY_ACTIVITIES",
@@ -197,7 +178,7 @@ export function filterCountriesByActivities(payload) {  //payload es el value de
 }
 
 
-//!ordenar alfabeticamente--------------------------------------------------------
+//ordenar alfabeticamente--------------------------------------------------------
 export function orderByName(payload) {
   return {
     type: "ORDER_BY_NAME",
@@ -205,7 +186,7 @@ export function orderByName(payload) {
   };
 }
 
-//!ordenar por poblacion--------------------------------------------------------
+//ordenar por poblacion--------------------------------------------------------
 export function orderByPopulation(payload) {
   return {
     type: "ORDER_BY_POPULATION",
@@ -214,7 +195,7 @@ export function orderByPopulation(payload) {
 }
 
 
-//!DETALLE DE PAÍS
+//DETALLE DE PAÍS
 //*Async-await
 export function getDetail(id){
   return async function (dispatch){
@@ -249,7 +230,7 @@ export function getDetail(id){
 
 
 
-//!clear Error--------------------------------------------------------
+//clear Error--------------------------------------------------------
 export function clearError() {
   return { type: "CLEAR_ERROR" }
 }
