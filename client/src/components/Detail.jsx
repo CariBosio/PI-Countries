@@ -93,7 +93,8 @@ export default function Detail() {
             </div>
           </div>
         ) : (
-          <div>
+          <div className={s.error}>
+            <div className={s.errorBody}>
             <p className={s.notCountries}>PAÍS INEXISTENTE!!!!!</p>
             {/* <div className={s.img}>
               <img id="act" src={Detalle} alt="img" />
@@ -102,9 +103,9 @@ export default function Detail() {
           className={s.gif}
           id="not"
           src={Not}
-          width="550"
-          height="550"
-          top="10px"
+          width="450"
+          height="450"
+          // top="10px"
           filter="drop-shadow(20px 50px 20px black)"
           alt=""
         />
@@ -112,7 +113,7 @@ export default function Detail() {
         <Link to="/home">
         <button className={s.notVol}>Volver</button>
       </Link>
-            
+            </div>
           </div>
         )}
       </div>
