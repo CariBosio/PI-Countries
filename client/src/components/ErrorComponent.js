@@ -23,9 +23,7 @@ export default function ErrorComponent() {
     <div className={s.cardError}>
         <div className={s.cardErrorBody}>
       <p className={s.notCountries}>PAÍS INEXISTENTE!!!!!</p>
-      {/* <div className={s.img}>
-  <img id="act" src={Detalle} alt="img" />
-</div> */}
+     
       <img
         className={s.gif}
         id="not"
