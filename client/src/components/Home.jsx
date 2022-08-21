@@ -10,13 +10,13 @@ import {
   orderByName,
   orderByPopulation,
 } from "../actions";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Card from "../components/Card";
 import Paginado from "./Paginated";
 import SearchBar from "./SearchBar";
 import s from "./HomeStyle.module.css";
 import Recargar from "./../img/actualizar.png";
-import Not from "./../img/ubicacion.gif";
+// import Not from "./../img/ubicacion.gif";
 import Loading from "./../img/7TwJ.gif";
 import ErrorComponent from "./ErrorComponent";
 

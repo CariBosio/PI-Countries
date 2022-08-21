@@ -121,7 +121,7 @@ export default function ActCreate() {
 
   useEffect(() => {
     dispatch(getCountries()); //para que me despache las activities, para después poder renderizarlas
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className={s.bodyActivityCreate}>
