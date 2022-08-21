@@ -7,6 +7,7 @@ const activities = require("./activities");
 const deletes = require("../routes/delete");
 const puts = require("../routes/put");
 
+
 const router = Router();
 
 // Configurar los routers
@@ -23,5 +24,7 @@ router.use("/delete", deletes);
 
 //actualizar activities
 router.use("/put", puts);
+
+
 
 module.exports = router;

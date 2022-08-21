@@ -1,7 +1,6 @@
 const axios = require("axios");
 const { Country, Activity } = require("../db");
 const { Op } = require("sequelize");
-const { name } = require("../app");
 
 
 //!GET a la Api------------------------------------------------------------------------------
@@ -125,25 +124,6 @@ const getAll = async (name) => {
 //     });
 //   }
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
 
 module.exports = {
   getAll,

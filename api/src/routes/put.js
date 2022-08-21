@@ -4,6 +4,7 @@ const { Country, Activity } = require("../db");
 
 
 //*Async-await    
+/* The above code is updating the activity table with the new information that is being passed in. */
 routesPut.put('/', async (req, res) =>{
       const {countryId, id, name, difficulty, season,duration} = req.body
       try{
