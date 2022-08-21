@@ -94,8 +94,10 @@ export default function ActCreate() {
 
   function handleSubmit(e) {
     e.preventDefault();
-
-    dispatch(postActivities(input));
+    if (thereAreErrors) {
+      return;
+    }
+       dispatch(postActivities(input));
     alert("Actividad creada");
     setInput({
       name: "",
