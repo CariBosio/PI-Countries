@@ -78,30 +78,7 @@ function rootReducer(state = initalState, action) {
         countries: sortedArray,
       };
             
-            //sort compara dos valores (name) y los ordena de menor a mayor
-              
-              // if (a.name > b.name) {
-              //   return 1;
-              // }
-              // if (a.name < b.name) {
-              //   return -1;
-              // }
-              // return 0; //si son iguales lo deja como está
-      //       })
-      //     : state.countries.sort(function (a, b) {
-      //         //sort compara dos valores (name) y los ordena de mayor a menor
-      //         if (a.name > b.name) {
-      //           return -1;
-      //         }
-      //         if (a.name < b.name) {
-      //           return 1;
-      //         }
-      //         return 0;
-      //       });
-      // return {
-      //   ...state,
-      //   countries: sortedArray,
-      // };
+          
 
     case "ORDER_BY_POPULATION": {
       let sortedPopuArray =
