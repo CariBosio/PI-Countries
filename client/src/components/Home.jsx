@@ -9,7 +9,6 @@ import {
   filterCountriesByActivities,
   orderByName,
   orderByPopulation,
-  clearError,
 } from "../actions";
 import { Link } from "react-router-dom";
 import Card from "../components/Card";
@@ -29,9 +28,6 @@ export default function Home() {
   const activities = useSelector((state) => state.activities); //lo mismo que hacer el mapStateToProps //me trae del reducer el estado activities, que tiene todas las actividades
   const error = useSelector((state) => state.error);
 
-
- 
-
   //!Paginado
   //definir varios estados locales
   const [currentPage, setCurrentPage] = useState(1); //un estado con la página actual y un estado que me setee la pagina actual - empieza en 1 porque siempre voy a arrancar en la primer página
@@ -43,7 +39,7 @@ export default function Home() {
   //     indexOfLastCountries
   //   ); //slice (corta)
   //   //↑ guarda los personajes que va a renderizar dependiendo de la página
-  
+
   let currentCountries;
   if (currentPage === 1) {
     currentCountries = allCountries?.slice(0, 9);
@@ -68,12 +64,9 @@ export default function Home() {
     // dispatch(filterCountriesByActivities());
   }, [dispatch]);
 
-  
   useEffect(() => {
     dispatch(getActivities());
   }, [dispatch]);
-
- 
 
   function handleClick(e) {
     e.preventDefault(); //para que no se rompa
@@ -107,21 +100,16 @@ export default function Home() {
     setOrdenPopulation(`Ordenado ${e.target.value}`); //modifique el estado local y se renderice
   }
 
-  function handleSubmitError(e) {
-    e.preventDefault();
-    dispatch(getCountries());
-    dispatch(clearError());
-  }
+  // function handleSubmitError(e) {
+  //   e.preventDefault();
+  //   dispatch(getCountries());
+  //   dispatch(clearError());
+  // }
 
   //Renderizar el componente
 
   return (
     <div className={s.bodyHome}>
-      {/* <div>
-        <NavBar />
-      </div> */}
-
-      {/* <h1>Paises del mundo</h1> */}
       <button
         className={s.reset}
         onClick={(e) => {
@@ -193,6 +181,7 @@ export default function Home() {
               <option value="asc">A-Z</option>
               <option value="desc">Z-A</option>
             </select>
+
             <select onChange={(e) => handlePopularSort(e)}>
               <option value="" disable selected hidden>
                 {""}Población
@@ -206,10 +195,7 @@ export default function Home() {
       </div>
       <div className={s.contsearch}>
         <div className={s.search}>
-          
-          <SearchBar
-          paginado={paginado} 
-          />
+          <SearchBar paginado={paginado} />
         </div>
       </div>
       <div>
@@ -222,50 +208,22 @@ export default function Home() {
       </div>
       {error ? (
         <ErrorComponent />
-      ) : // <div>
-      //   <p className={s.notCountries}>PAÍS INEXISTENTE!!!!!</p>
-      //   <img
-      //     className={s.gif}
-      //     id="not"
-      //     src={Not}
-      //     width="300"
-      //     height="300"
-      //     top="10px"
-      //     filter="drop-shadow(20px 50px 20px black)"
-      //     alt=""
-      //   />
-      //   <br></br>
-
-      //   <button className={s.notVol} onClick={(e) => handleSubmitError(e)}>
-      //     Volver
-      //   </button>
-      // </div>
-      allCountries.length === 0 ? (
+      ) : allCountries.length === 0 ? (
         <img src={Loading} alt="loading" height="300px" width="300px" />
       ) : (
         <div className={s.cards}>
-          {currentCountries?.map(
-            (
-              c //saco el allCountries y hago el map de currentCountries
-            ) => (
-              // return (
-              //   <fragment>
-              //   <Link to={"/home/" + c.id}>
-              <Card
-                flags={c.flags}
-                name={c.name}
-                continents={c.continents}
-                population={`${c.population} hab.`}
-                key={c.id}
-                id={c.id}
-              />
-            )
-          )}
+          {currentCountries?.map((c) => (
+            <Card
+              flags={c.flags}
+              name={c.name}
+              continents={c.continents}
+              population={`${c.population} hab.`}
+              key={c.id}
+              id={c.id}
+            />
+          ))}
         </div>
       )}
-
-      <div>{/*Filtros  */}</div>
-      {/* <p className="footer">© Copyright 2022 | Carina Bosio | Diseño y Desarrollo | Todos los derechos reservados | Henry`s PI</p> */}
     </div>
   );
 }
