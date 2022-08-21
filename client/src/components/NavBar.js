@@ -25,7 +25,7 @@ export default function NavBar() {
           <li className={s.listitem}>
             <Link to="/">Inicio</Link>
             <Link to="/home">Página principal</Link>
-            <a href="#">
+            <a href="https://github.com/CariBosio/PI-Countries">
               <img
                 id="linkedin"
                 src={GitHub}
