@@ -24,7 +24,7 @@ Algunas de sus funcionalidades son:
 - [ ] CSS Modules 
 
 ## Previews
-<video autoPlay loop muted src="https://res.cloudinary.com/carina-bosio/video/upload/v1664402242/Presentaci%C3%B3n_MP4_AdobeExpress_uxbot2.mp4>"/>
+<video autoPlay loop muted src="https://res.cloudinary.com/carina-bosio/video/upload/v1664402242/Presentaci%C3%B3n_MP4_AdobeExpress_uxbot2.mp4"/>
 <img height="500" width="1000" src="https://res.cloudinary.com/carina-bosio/image/upload/v1664398965/Landing_2_g43ohb.png"/>
 <img height="500" width="1000" src="https://res.cloudinary.com/carina-bosio/image/upload/v1664400305/1_2_objgcs.png"  />
 <img height="500" width="1000" src="https://res.cloudinary.com/carina-bosio/image/upload/v1664400537/2_2_q56i0k.png"/>
