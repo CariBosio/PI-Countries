@@ -25,7 +25,7 @@ Algunas de sus funcionalidades son:
 
 ## Previews
 
-<img height="527" width="1000" src="https://res.cloudinary.com/carina-bosio/image/upload/v1664398965/Landing_2_g43ohb.png"/>
+<img height="527" width="1000" src="https://res.cloudinary.com/carina-bosio/image/upload/v1664409223/Landing_3_uxgqiz.png"/>
 <img height="530" width="1000" src="https://res.cloudinary.com/carina-bosio/image/upload/v1664400305/1_2_objgcs.png"  />
 <img height="537" width="1000" src="https://res.cloudinary.com/carina-bosio/image/upload/v1664400537/2_2_q56i0k.png"/>
 <img height="532" width="1000" src="https://res.cloudinary.com/carina-bosio/image/upload/v1664400738/3_2_htxkkr.png"/>
