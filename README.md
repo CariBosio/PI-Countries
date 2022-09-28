@@ -189,3 +189,18 @@ __IMPORTANTE__: No está permitido utilizar los filtrados, ordenamientos y pagin
 - [ ] Al menos tener un componente del frontend con sus tests respectivos
 - [ ] Al menos tener una ruta del backend con sus tests respectivos
 - [ ] Al menos tener un modelo de la base de datos con sus tests respectivos
+
+<video
+        className={s.video}
+          // id="intro"
+          src="https://res.cloudinary.com/carina-bosio/video/upload/v1664398040/video_sol8on.mp4"
+          // width="200"
+          // height="59"
+          autoPlay
+          loop
+          muted
+          // top="10px"
+          // className="d-inline-block align-top"
+          alt=""
+          poster={Poster}
+        />
