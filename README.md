@@ -27,7 +27,8 @@ Algunas de sus funcionalidades son:
 <img height="500" src="https://res.cloudinary.com/carina-bosio/image/upload/v1664398965/Landing_2_g43ohb.png"/>
 <img height="500" src="https://res.cloudinary.com/carina-bosio/image/upload/v1664400305/1_2_objgcs.png"  />
 <img height="500" src="https://res.cloudinary.com/carina-bosio/image/upload/v1664400537/2_2_q56i0k.png"/>
-<img height="500" src="./addActivity.JPG"/>
-<img height="500" src="./detailsWithActivity.JPG"/>
+<img height="500" src="https://res.cloudinary.com/carina-bosio/image/upload/v1664400738/3_2_htxkkr.png"/>
+<img height="500" src="https://res.cloudinary.com/carina-bosio/image/upload/v1664400906/4_2_m9dw8t.png"/>
+<img height="500" src="https://res.cloudinary.com/carina-bosio/image/upload/v1664401057/5_2_yfu88i.png"/>
 
 
