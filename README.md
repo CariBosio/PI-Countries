@@ -190,6 +190,7 @@ __IMPORTANTE__: No está permitido utilizar los filtrados, ordenamientos y pagin
 - [ ] Al menos tener una ruta del backend con sus tests respectivos
 - [ ] Al menos tener un modelo de la base de datos con sus tests respectivos
 
+```js
 <video
         className={s.video}
           // id="intro"
@@ -204,3 +205,9 @@ __IMPORTANTE__: No está permitido utilizar los filtrados, ordenamientos y pagin
           alt=""
           poster={Poster}
         />
+        
+        <p align="left">
+  <img height="200" src="https://res.cloudinary.com/carina-bosio/image/upload/v1664398965/Landing_2_g43ohb.png" />
+</p>
+        
+        ```
