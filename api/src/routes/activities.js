@@ -2,7 +2,7 @@ const { Router } = require("express");
 //const express = require("express");
 const router = Router();
 const { Country, Activity } = require("../db");
-const { getAll } = require("../controllers/countries");
+// const { getAll } = require("../controllers/countries");
 //const { getAllActivity } = require("../controllers/activities");
 // const { Op } = require("sequelize");
 
