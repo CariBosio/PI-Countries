@@ -1,20 +1,20 @@
 import axios from "axios";
 
-
+const {REACT_APP_BACKEND_URL="localhost:3001"} = process.env; 
 //getCountries--------------------------------------------------------
 //*Async-await
 
 export function getCountries() {
   return async function (dispatch) {
     
-    var json = await axios.get("http://localhost:3001/countries", {
+    var json = await axios.get(REACT_APP_BACKEND_URL + "/countries", {
     });
     return dispatch({
       type: "GET_COUNTRIES",
       payload: json.data,
     });
       
-      // return await axios.get("http://localhost:3001/countries")
+      // return await axios.get(REACT_APP_BACKEND_URL + "/countries")
       // .then((res) => {
       //   dispatch({ type: "GET_COUNTRIES", payload: res.data });
       // })
@@ -28,7 +28,7 @@ export function getCountries() {
 //*Promises
 // export function getCountries() {
 //   return function (dispatch) {
-//     return axios.get("http://localhost:3001/countries")
+//     return axios.get(REACT_APP_BACKEND_URL + "/countries")
 //       .then((res) => {
 //         dispatch({ type: "GET_COUNTRIES", payload: res.data });
 //       }).catch((error) => {
@@ -47,7 +47,7 @@ export function getNameCountries(name) {
   return async function (dispatch) {
     try {
       var json = await axios.get(
-        "http://localhost:3001/countries?name=" + name
+        REACT_APP_BACKEND_URL + "/countries?name=" + name
       );
       //pegale esta ruta, que es la ruta por query, y después del = quiero que le pases lo que me llega por payload(lo que el usuario escriba en la barra de búsqueda)
       //ejecuta esa ruta llamando lo que está después del =
@@ -69,7 +69,7 @@ export function getNameCountries(name) {
 //*Promises.
 // export function getNameCountries(name) {
 //   return function (dispatch) {
-//     return axios.get("http://localhost:3001/countries?name=" + name)
+//     return axios.get(REACT_APP_BACKEND_URL + "/countries?name=" + name)
 //       .then((res) => {
 //         dispatch({ type: "GET_NAME_COUNTRIES", payload: res.data });
 //       }).catch((error) => {
@@ -92,7 +92,7 @@ export function getNameCountries(name) {
 //me trae las actividades para después poder crearlas
 export function getActivities() {
   return async function (dispatch) {
-    var info = await axios.get("http://localhost:3001/activity", {});
+    var info = await axios.get(REACT_APP_BACKEND_URL + "/activity", {});
     return dispatch({
       type: "GET_ACTIVITIES",
       payload: info.data,  //puedo ponerle info o json
@@ -103,7 +103,7 @@ export function getActivities() {
 //*Promises
 // export function getActivities() {
 //   return function (dispatch) {
-//     return axios.get("http://localhost:3001/activity")
+//     return axios.get(REACT_APP_BACKEND_URL + "/activity")
 //       .then((res) => {
 //         dispatch({ type: "GET_ACTIVITIES", payload: res.data });
 //       }).catch((error) => {
@@ -117,7 +117,7 @@ export function getActivities() {
 
 // export function getActivities(){
 //   return function (dispatch){
-//     return fetch("http://localhost:3001/activity")
+//     return fetch(REACT_APP_BACKEND_URL + "/activity")
 //     .then(res => res.json())
 //     .then(data => {
 //       dispatch({
@@ -139,7 +139,7 @@ export function getActivities() {
 export function postActivities(payload){  //payload es el objeto que me llega por el formulario del front
   console.log("action: " + payload);
   return async function (dispatch){
-    const response = await axios.post("http://localhost:3001/activity", payload); //en esta ruta hacemos el post del payload
+    const response = await axios.post(REACT_APP_BACKEND_URL + "/activity", payload); //en esta ruta hacemos el post del payload
     console.log(response);
     return response;
   }
@@ -148,7 +148,7 @@ export function postActivities(payload){  //payload es el objeto que me llega po
 //*Promises
 // export function postActivities(payload) {
 //   return function (dispatch) {
-//     return axios.post("http://localhost:3001/activity", payload)
+//     return axios.post(REACT_APP_BACKEND_URL + "/activity", payload)
 //       .then((res) => {
 //         dispatch({ type: "POST_ACTIVITIES", payload: res.data });
 //       }).catch((error) => {
@@ -200,7 +200,7 @@ export function orderByPopulation(payload) {
 export function getDetail(id){
   return async function (dispatch){
     try{
-      var json = await axios.get("http://localhost:3001/countries/"+id);
+      var json = await axios.get(REACT_APP_BACKEND_URL + "/countries/"+id);
       console.log(json)
       return dispatch({
         type: "GET_DETAILS",
@@ -216,7 +216,7 @@ export function getDetail(id){
 //*Promises
 // export function getDetail(id) {
 //   return function (dispatch) {
-//     return axios.get("http://localhost:3001/countries/"+id)
+//     return axios.get(REACT_APP_BACKEND_URL + "/countries/"+id)
 //       .then((res) => {
 //         dispatch({ type: "GET_DETAILS", payload: res.data });
 //       }).catch((error) => {
