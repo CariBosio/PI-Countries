@@ -10,7 +10,7 @@ export function getCountries() {
     var json = await axios.get(REACT_APP_BACKEND_URL + "/countries", {
     });
     return dispatch({
-      type: "GET_COUNTRIES",
+      type: "GET_COUNTRIE",
       payload: json.data,
     });
       
